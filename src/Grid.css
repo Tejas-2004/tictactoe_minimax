@@ -1,0 +1,31 @@
+.MainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.GridContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    border: 5px solid #403f3f;
+    width: 50px;
+    height: 50px;
+}
+
+.Player {
+    font-size: xx-large;
+    margin-bottom: 2rem;
+}
+
+
+.Grid:hover {
+    background-color: #615f5f;
+}
