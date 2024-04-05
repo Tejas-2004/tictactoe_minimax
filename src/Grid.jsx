@@ -17,16 +17,18 @@ function Grid() {
     
     const markSymbol = (index)=>{
         if(!check && player==="X"){
-            if(board[index]===-1) board[index]=playerValue
-            setBoard(board);
-            // setPlayer(player === "X" ? "O" : "X");
-            setPlayer("O")
+            if(board[index]===-1){
+                board[index]=playerValue
+                setBoard(board);
+                // setPlayer(player === "X" ? "O" : "X");
+                setPlayer("O")
+            }
         }
 
         if(!check && player=="O"){
             axios.post('http://127.0.0.1:5000/send-data', {board})
             .then(response => {
-                // console.log('Received response from backend:', response.data);
+                console.log('Received response from backend:', response.data);
                 const AI_position =  response.data.pos
                 // markSymbol(AI_position)
                 if(board[AI_position]===-1) board[AI_position]=playerValue
