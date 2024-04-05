@@ -6,8 +6,8 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 @app.route('/')
-def hello():
-    return 'Hello, Johnny!'
+def home():
+    return 'Home route'
 
 @app.route('/send-data', methods=['POST'])
 def receive_data():

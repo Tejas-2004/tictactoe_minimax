@@ -79,7 +79,7 @@ def minimax(board, depth, isMax):
             if board[i] == -1:  # Check if cell is empty
                 # Make the move
                 board[i] = opponent
-                # Call minimax recursively and choose the maximum value
+                # Call minimax recursively and choose the minimum value
                 best = min(best, minimax(board, depth + 1, not isMax))
 
                 # Undo the move
@@ -97,7 +97,7 @@ def minimax(board, depth, isMax):
                 # Make the move
                 board[i] = player
 
-                # Call minimax recursively and choose the minimum value
+                # Call minimax recursively and choose the maximum value
                 best = max(best, minimax(board, depth + 1, not isMax))
                 # Undo the move
                 board[i] = -1
